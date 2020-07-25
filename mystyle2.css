@@ -1,0 +1,79 @@
+body {
+    background: white url("images/addEvent.jpg") repeat center center fixed;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: 85% 100%;
+    /*overflow: hidden;*/
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.nav-item {
+    margin: 0 4px 0;
+}
+
+.user {
+    padding: 10px 0px 20px;
+    text-align:center;
+    color: white;
+    /*font-family: 'Baloo Thambi 2', cursive;*/
+    border-bottom: 1px solid rgb(220,220,220);
+}
+
+.menu {
+    padding: 15px 0px;
+    text-align:center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+.transparent {
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.panel {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.datepicker {
+    width: 250px;
+}
+
+.table-condensed {
+    width: 100%;
+}
+
+#center-page {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px 0 12% 0;
+    margin: auto;
+}
+
+#collapse {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */ 
+    display: none;  
+    height: 100%;
+    width: 275px;
+    position: absolute; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 50px;
+    background-color: rgb(10,10,10); /* Black fallback color */
+    background-color: rgba(10,10,10,0.9); /* Black w/opacity */
+    /*overflow: hidden;  Disable scroll */
+}

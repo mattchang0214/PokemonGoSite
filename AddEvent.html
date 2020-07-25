@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Event</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Font Awesome Icons CSS -->
+  <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+  <!-- Google Font CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+  <!-- Calendar CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.css"/>
+  <!-- My CSS -->
+  <link rel="stylesheet" type="text/css" href="mystyle2.css">
+  
+  <!-- JQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <!-- Bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Calendar script -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <!-- Google Maps script -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAQJRO_ZM6NVJyLeL2yKxAHr0DKdBO06g&callback=initAddMap"></script>
+  <!-- My script -->
+  <script src="mapEvents.js"></script>
+  <script src="calendar.js"></script>
+</head>
+
+<body>
+<div>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="btn btn-light bg-light" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="row">
+    <div id="collapse">
+      <img src="images/menuLogo.jpeg" style="max-width:275px;">
+      <div class="user">
+        <span class="navbar-brand" style="font-size: 30px;">
+          <img src="images/menuIcon.png" height="22" width="38">
+          John Smith
+        </span>
+      </div>
+      <div class="menu">
+        My Events
+      </div>
+      <div class="menu">
+        Account Settings
+      </div>
+    </div>
+
+    <div id="center-page">
+      <div class="panel panel-default transparent">
+        <div class="panel-body" style="text-align: center; padding: 5%">
+          <h1>
+            <img src="images/addEventIcon.gif" height="25" width="25">&nbsp;Add Event&nbsp;<img src="https://media0.giphy.com/media/WytSQL7115G6uPwDwK/source.gif" height="25" width="25">
+          </h1>
+          
+          <br>
+          <form id="add-event">
+            <div class="form-group row">
+              <label for="eventname" class="col-sm-3 col-form-label">Event Name</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="eventname">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="description" class="col-sm-3 col-form-label">Description</label>
+              <div class="col-sm-9">
+                <textarea class="form-control" id="description" rows="2"></textarea>
+              </div>
+            </div>
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-3">Tags</legend>
+                <div class="col-sm-9 tag-filter">
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group row">
+              <label for="add-date" class="col-sm-3 col-form-label">Date</label>
+              <div class="col">
+                <input type="text" class="form-control" id="add-date">
+              </div>
+              <div id="calendarAdd" class="bootstrap-calendar" style="position: absolute; top: 150px; left: 160px;"></div>
+              <label for="time" class="col-auto col-form-label">Time</label>
+              <div class="col"> 
+                <select id="time" class="form-control">
+                  <option selected>12:00 AM</option>
+                  <option>12:30 AM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="eventname" class="col-sm-3 col-form-label">Location<br>(click to set)</label>
+              <div class="col-sm-9" id="map" style="position: relative; height: 260px;">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-2 offset-md-4">
+                <button type="submit" class="btn btn-success">Post</button>
+              </div>
+              <div class="col-sm-2">
+                <button type="button" class="btn btn-danger" onclick="window.location.href='LandingPage.html'">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
